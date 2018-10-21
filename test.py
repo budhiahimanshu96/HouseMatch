@@ -8,6 +8,7 @@ from sklearn import linear_model
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import Pipeline
+from flask_cors import CORS
 
 
 # TO START APP, TYPE: gunicorn test:app
@@ -15,6 +16,7 @@ from sklearn.pipeline import Pipeline
 app = Flask(__name__)
 # define a predict function as an endpoint 
 
+CORS(app)
 
 X = pd.read_excel('Dataset.xlsx')
 x = X.values
