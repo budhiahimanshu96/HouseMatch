@@ -52,16 +52,16 @@ app = Flask(__name__)
 def hello_world():
     return 'Hello, World!'
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['GET'])
 def predict():
-    if not request.json or not 'income' in request.json:
+    if not request.args:
         abort(400)
 
-    print(request.json)
-    income = request.json.get("income")
-    taxesAndInsurance = request.json.get("taxesAndInsurance")
-    monthlyExpenses = request.json.get("monthlyExpenses")
-    age = request.json.get("age")
+    print(request.args)
+    income = request.args.get("income")
+    taxesAndInsurance = request.args.get("taxesAndInsurance")
+    monthlyExpenses = request.args.get("monthlyExpenses")
+    age = request.args.get("age")
     print(income)
     print(taxesAndInsurance)
     print(monthlyExpenses)
