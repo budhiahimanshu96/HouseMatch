@@ -10,6 +10,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import Pipeline
 
 
+# TO START APP, TYPE: gunicorn test:app
+
 app = Flask(__name__)
 # define a predict function as an endpoint 
 
