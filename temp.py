@@ -43,28 +43,6 @@ y_pred = regressor.predict([[0.23705,-0.658374,-0.670155,-0.939774]])
 #print(y_partitioned)  
 #clf.fit(, )
              
-
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
 # Create first network with Keras
 from keras.models import Sequential
 from keras.layers import Dense
